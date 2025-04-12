@@ -1,0 +1,20 @@
+{% extends 'base_generic.html' %}
+
+{% block content %}
+  <h2>Available Products</h2>
+  
+  <div class="product-list">
+    {% for product in products %}
+      <div class="product-item">
+        <h3>{{ product.name }}</h3>
+        <p>{{ product.description }}</p>
+        <p><strong>Price:</strong> ${{ product.price }}</p>
+        <p><strong>Available Quantity:</strong> {{ product.quantity }}</p>
+        <p><a href="#">Request Product</a></p>
+      </div>
+    {% empty %}
+      <p>No products available at the moment.</p>
+    {% endfor %}
+  </div>
+
+{% endblock %}

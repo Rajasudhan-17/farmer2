@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Welcome, Farmer {{ request.user.username }}</h2>
+<p>This is your dashboard.</p>
+<!-- filepath: c:\Users\LEN\Documents\farmers_market\farmers_market\templates\accounts\farmer_dashboard.html -->
+<h1>Farmer Dashboard</h1>
+<a href="{% url 'marketplace:manage_stock' %}">Manage Stock</a>
+<a href="{% url 'marketplace:add_product' %}">Add Product</a>
+<a href="{% url 'marketplace:product_list' %}">View Products</a>
+{% endblock %}
